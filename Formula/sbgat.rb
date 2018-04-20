@@ -24,7 +24,7 @@ class Sbgat < Formula
 
   desc "The implementation of the Small Bodies Geophysical Analysis Tool "
   homepage "https://github.com/bbercovici/SBGAT"
-  url "https://github.com/bbercovici/SBGAT/archive/1.04.5.tar.gz"
+  url "https://github.com/bbercovici/SBGAT/archive/1.04.6.tar.gz"
   sha256 "55b159965d20fd93168ecbae5bb043dd939bf716cc4e29508bd843a9a6064e33"
 
   # Dependencies
