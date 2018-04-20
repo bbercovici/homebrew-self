@@ -32,6 +32,8 @@ class SbgatGui < Formula
 
   def install
 
+    system "ls"
+
     # Compile and install SbgatGui
     Dir.chdir("SbgatGui") do
 
