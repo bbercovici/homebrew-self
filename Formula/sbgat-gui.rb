@@ -28,7 +28,7 @@ class SbgatGui < Formula
   sha256 "7cf5e4995464028680a7ca97436f763807b3964ccfaae11fb6c8e9702f747f6a"
 
   # Dependencies
-  depends_on "bbercovici/self/sbgatCore"
+  depends_on "bbercovici/self/sbgat-core"
   depends_on "qt"
   depends_on "bbercovici/self/vtk"
 
