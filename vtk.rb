@@ -43,13 +43,13 @@ class Vtk < Formula
 
 
     if (build.with ? "2-threads")
-      Build_threads = "-j2"
+      build_threads = "-j2"
     elsif (build.with ? "4-threads")
-      Build_threads = "-j4"
+      build_threads = "-j4"
     elsif (build.with ? "all-threads")
-      Build_threads = "-j"
+      build_threads = "-j"
     else
-      Build_threads = ""
+      build_threads = ""
     end
 
     unix_makefiles = "Unix Makefiles" 
