@@ -39,6 +39,9 @@ class Sharmlib < Formula
       system "cmake . -DBREW:BOOL=TRUE" 
     end
 
+    system "make -j"
+    
+
     # Create symlink to library
     lib.install "libSHARMLib.dylib"
     include.install "include/SHARMLib.hpp"
