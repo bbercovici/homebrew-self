@@ -33,7 +33,7 @@ class Sbgat < Formula
   depends_on "bbercovici/self/sharmlib" 
   depends_on "bbercovici/self/yorplib"
   depends_on "qt"
-  depends_on "bbercovici/self/vtk" => ["with-qt","with-all-threads"]
+  depends_on "bbercovici/self/vtk" => ["with-qt"]
 
   # Options
   option "with-gcc", "On Mac, will attempt to compile Rbk with gcc from the Cellar "

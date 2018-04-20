@@ -37,8 +37,9 @@ class Vtk < Formula
 
   option "without-python@2", "Build without python2 support"
   option "with-2-threads", "Build vtk with two threads"
+  option "with-3-threads", "Build vtk with three threads"
   option "with-4-threads", "Build vtk with four threads"
-  option "with-all-threads", "Build vtk with all threads"
+  option "with-all-threads", "Build vtk with all threads available on the build platform"
 
 
   deprecated_option "without-python" => "without-python@2"
@@ -65,6 +66,8 @@ class Vtk < Formula
 
     if build.with? "2-threads"
       build_threads = "-j2"
+    elsif build.with? "3-threads"
+      build_threads = "-j3"
     elsif build.with? "4-threads"
       build_threads = "-j4"
     elsif build.with? "all-threads"
@@ -148,7 +151,7 @@ class Vtk < Formula
       system "make #{build_threads}"
 
       system "make", "install"
-      
+
     end
   end
 
