@@ -39,7 +39,7 @@ class SbgatCore < Formula
   depends_on "qt" if  build.with?("with-qt")
   depends_on "bbercovici/self/vtk" if  build.with?("with-qt")
   depends_on "vtk" if  !build.with?("with-qt")
-
+  
   def install
 
     # Compile and install SbgatCore

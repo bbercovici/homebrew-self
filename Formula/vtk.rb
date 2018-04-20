@@ -61,6 +61,8 @@ class Vtk < Formula
 
   def install
 
+    puts "Installing VTK with Qt linking"
+
     # Choose the number of threads to dedicate to the build
     # Default number of threads is 1
 
