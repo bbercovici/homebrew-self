@@ -32,11 +32,11 @@ class SbgatGui < Formula
 
   def install
 
-    system "ls"
 
     # Compile and install SbgatGui
     Dir.chdir("SbgatGui") do
-
+      system "ls"
+      
       if build.with? "gcc"
         system "cmake . -DBREW:BOOL=TRUE -DUSE_GCC:BOOL=TRUE" 
       else
