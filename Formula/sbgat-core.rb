@@ -55,6 +55,8 @@ class SbgatCore < Formula
 
     include.install "include/SbgatCore"
     share.install "SbgatCore"
+    lib.install "libSbgatCore.dylib"
+    
   end
 
     prefix.install "Tests/"
