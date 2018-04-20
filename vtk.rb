@@ -123,7 +123,7 @@ class Vtk < Formula
       
 
       system "cmake", "..", *args
-      system "make -j#{N_treads}"
+      system "make -j#{build_threads}"
       system "make", "install"
     end
   end
