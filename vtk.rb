@@ -34,7 +34,7 @@ class Vtk < Formula
   def install
 
 
-    unix_makefiles = " "Unix Makefiles" "
+    unix_makefiles = " Unix Makefiles" 
     args = std_cmake_args + %W[
       -DBUILD_SHARED_LIBS=ON
       -DBUILD_TESTING=OFF
