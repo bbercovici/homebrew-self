@@ -13,6 +13,9 @@ class Vtk < Formula
   end
 
   option "without-python@2", "Build without python2 support"
+  option "with-2-threads", "Uses two threads while compiling"
+  option "with-4-threads", "Uses four threads while compiling"
+  option "with-all-threads", "Uses all threads while compiling"
 
   deprecated_option "without-python" => "without-python@2"
 
@@ -33,6 +36,18 @@ class Vtk < Formula
 
   def install
 
+    # Choose the number of threads to dedicate to the build
+    if (build.with ? "2-threads")
+      N_treads = 2
+    end
+
+    if (build.with ? "4-threads")
+      N_treads = 4
+    end
+
+    if (build.with ? "all-threads")
+      N_treads = ""
+    end
 
     unix_makefiles = "Unix Makefiles" 
     args = std_cmake_args + %W[
@@ -105,7 +120,7 @@ class Vtk < Formula
       
 
       system "cmake", "..", *args
-      system "make -j"
+      system "make -j#{N_treads}"
       system "make", "install"
     end
   end
