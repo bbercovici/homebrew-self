@@ -36,7 +36,7 @@ class Sbgat < Formula
   depends_on "bbercovici/self/vtk" => ["with-qt","with-all-threads"]
 
   # Options
-  options "with-gcc", "On Mac, will attempt to compile Rbk with gcc from the Cellar "
+  option "with-gcc", "On Mac, will attempt to compile Rbk with gcc from the Cellar "
 
   def install
 
