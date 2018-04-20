@@ -42,14 +42,14 @@ class Vtk < Formula
     # Default number of threads is 1
 
 
-    if build.with ? "2-threads"
-    build_threads = "-j2"
-    elsif build.with ? "4-threads"
-    build_threads = "-j4"
-    elsif build.with ? "all-threads"
-    build_threads = "-j"
+    if build.with? "2-threads"
+      build_threads = "-j2"
+    elsif build.with? "4-threads"
+      build_threads = "-j4"
+    elsif build.with? "all-threads"
+      build_threads = "-j"
     else
-    build_threads = ""
+      build_threads = ""
     end
 
     unix_makefiles = "Unix Makefiles" 
