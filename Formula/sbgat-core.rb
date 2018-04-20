@@ -36,10 +36,10 @@ class SbgatCore < Formula
   depends_on "bbercovici/self/rbk" 
   depends_on "bbercovici/self/sharmlib" 
   depends_on "bbercovici/self/yorplib"
-  depends_on "qt" if  build.with?("with-qt")
-  depends_on "bbercovici/self/vtk" if  build.with?("with-qt")
-  depends_on "vtk" if  !build.with?("with-qt")
-  
+  depends_on "qt" if build.with? "with-qt"
+  depends_on "bbercovici/self/vtk" if  build.with? "with-qt"
+  depends_on "vtk" if  !build.with? "with-qt"
+
   def install
 
     # Compile and install SbgatCore
