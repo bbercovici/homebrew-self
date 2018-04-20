@@ -28,7 +28,7 @@ class Sharmlib < Formula
 
   depends_on "cmake" => :build
 
-  option "with-gcc", "On Mac, will attempt to compile Rbk with gcc from the Cellar "
+  option "with-gcc", "On Mac, will attempt to compile with gcc from the Cellar "
 
   def install
 
@@ -40,7 +40,7 @@ class Sharmlib < Formula
     end
 
     system "make -j"
-    
+
 
     # Create symlink to library
     lib.install "libSHARMLib.dylib"

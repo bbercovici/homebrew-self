@@ -28,7 +28,7 @@ class Rbk < Formula
 
   depends_on "cmake" => :build
 
-  option "with-gcc", "On Mac, will attempt to compile Rbk with gcc from the Cellar "
+  option "with-gcc", "On Mac, will attempt to compile with gcc from the Cellar "
 
   def install
 

@@ -20,35 +20,36 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-class Sbgat < Formula
+class SbgatCore < Formula
 
   desc "The implementation of the Small Bodies Geophysical Analysis Tool "
   homepage "https://github.com/bbercovici/SBGAT"
   url "https://github.com/bbercovici/SBGAT/archive/1.04.6.tar.gz"
   sha256 "7cf5e4995464028680a7ca97436f763807b3964ccfaae11fb6c8e9702f747f6a"
 
+  # Options
+  option "with-gcc", "On Mac, will attempt to compile with gcc from the Cellar "
+  option 'with-qt', 'Will install Qt and the proper version of VTK to enable use of SbgatGui'
+
   # Dependencies
   depends_on "cmake" 
   depends_on "bbercovici/self/rbk" 
   depends_on "bbercovici/self/sharmlib" 
   depends_on "bbercovici/self/yorplib"
-  depends_on "qt"
-  depends_on "bbercovici/self/vtk" => ["with-qt"]
-
-  # Options
-  option "with-gcc", "On Mac, will attempt to compile Rbk with gcc from the Cellar "
+  depends_on "qt" if  build.with?('with-gui')
+  depends_on "bbercovici/self/vtk" if  build.with?('with-qt')
+  depends_on "vtk" if  !build.with?('with-qt')
 
   def install
 
     # Compile and install SbgatCore
     Dir.chdir("SbgatCore") do
 
-     if build.with? "gcc"
+    if build.with? "gcc"
       system "cmake . -DBREW:BOOL=TRUE -DUSE_GCC:BOOL=TRUE" 
     else
       system "cmake . -DBREW:BOOL=TRUE" 
     end
-
 
     system "make -j"
 
@@ -56,26 +57,7 @@ class Sbgat < Formula
     share.install "SbgatCore"
   end
 
-    # Compile and install SbgatGui
-    # Dir.chdir("SbgatGui") do
-
-    #   home_dir = File.expand_path('~')
-
-    #   if build.with? "gcc"
-    #     system "cmake . -DBREW:BOOL=TRUE -DUSE_GCC:BOOL=TRUE" 
-    #   else
-    #     system "cmake . -DBREW:BOOL=TRUE" 
-    #   end 
-    #   system "make -j"
-
-    #   bin.install "SbgatGui"
-
-    # end
-
-
     prefix.install "Tests/"
-
-
 
   end
 

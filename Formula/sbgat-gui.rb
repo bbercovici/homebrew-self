@@ -1,4 +1,3 @@
-# yorplib.rb
 # MIT License
 
 # Copyright (c) 2018 Benjamin Bercovici
@@ -21,33 +20,37 @@
 # OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
 # SOFTWARE.
 
-class Yorplib < Formula
-  desc "A library for the computation of the Fourier decomposition of YORP forces and moments"
-  homepage "https://github.com/bbercovici/YORPLib"
-  url "https://github.com/bbercovici/YORPLib/archive/1.0.6.tar.gz"
-  sha256 "08c2df5a3d028fafe169892e9e1da17c4910ded0503ff6a72d082b0bac7ffde0"
+class SbgatGui < Formula
 
-  depends_on "cmake" => :build
+  desc "The implementation of the Small Bodies Geophysical Analysis Tool "
+  homepage "https://github.com/bbercovici/SBGAT"
+  url "https://github.com/bbercovici/SBGAT/archive/1.04.6.tar.gz"
+  sha256 "7cf5e4995464028680a7ca97436f763807b3964ccfaae11fb6c8e9702f747f6a"
 
+  # Dependencies
+  depends_on "bbercovici/self/sbgatCore"
+  depends_on "bbercovici/self/vtk" => ["with-qt"]
+
+  # Options
   option "with-gcc", "On Mac, will attempt to compile with gcc from the Cellar "
 
   def install
 
-    # Compile
-    if build.with? "gcc"
-      system "cmake . -DBREW:BOOL=TRUE -DUSE_GCC:BOOL=TRUE" 
-    else
-      system "cmake . -DBREW:BOOL=TRUE" 
+   
+    # Compile and install SbgatGui
+    Dir.chdir("SbgatGui") do
+
+      if build.with? "gcc"
+        system "cmake . -DBREW:BOOL=TRUE -DUSE_GCC:BOOL=TRUE" 
+      else
+        system "cmake . -DBREW:BOOL=TRUE" 
+      end 
+      system "make -j"
+
+      bin.install "SbgatGui"
+
     end
 
-    system "make -j"
-
-
-    # Create symlink to library
-    lib.install "libYORPLib.dylib"
-    include.install "include/YORPLib"
-    share.install "share/YORPLib"
-    prefix.install "Example/"
 
 
   end
