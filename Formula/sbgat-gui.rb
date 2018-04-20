@@ -30,7 +30,7 @@ class SbgatGui < Formula
   # Dependencies
   depends_on "bbercovici/self/sbgat-core"
   depends_on "qt"
-  depends_on "bbercovici/self/vtk"
+  # depends_on "bbercovici/self/vtk"
 
   # Options
   option "with-gcc", "On Mac, will attempt to compile with gcc from the Cellar "
