@@ -36,7 +36,13 @@ class Vtk < Formula
 
   def install
 
+
+
     # Choose the number of threads to dedicate to the build
+    # Default number of threads is 1
+
+    N_treads = 1
+    
     if (build.with ? "2-threads")
       N_treads = 2
     end
