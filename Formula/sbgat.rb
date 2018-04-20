@@ -57,21 +57,20 @@ class Sbgat < Formula
   end
 
     # Compile and install SbgatGui
-    Dir.chdir("SbgatGui") do
+    # Dir.chdir("SbgatGui") do
 
-      home_dir = File.expand_path('~')
-      puts home_dir
+    #   home_dir = File.expand_path('~')
 
-      if build.with? "gcc"
-        system "cmake . -DBREW:BOOL=TRUE -DUSE_GCC:BOOL=TRUE" 
-      else
-        system "cmake . -DBREW:BOOL=TRUE" 
-      end 
-      system "make -j"
+    #   if build.with? "gcc"
+    #     system "cmake . -DBREW:BOOL=TRUE -DUSE_GCC:BOOL=TRUE" 
+    #   else
+    #     system "cmake . -DBREW:BOOL=TRUE" 
+    #   end 
+    #   system "make -j"
 
-      bin.install "SbgatGui"
+    #   bin.install "SbgatGui"
 
-    end
+    # end
 
 
     prefix.install "Tests/"
