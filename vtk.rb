@@ -1,4 +1,4 @@
-class vtk < Formula
+class Vtk < Formula
   desc "Toolkit for 3D computer graphics, image processing, and visualization. Modified install options specifically for Sbgat"
   homepage "https://www.vtk.org/"
   url "https://www.vtk.org/files/release/8.1/VTK-8.1.0.tar.gz"
