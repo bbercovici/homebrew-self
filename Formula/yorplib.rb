@@ -40,6 +40,9 @@ class Yorplib < Formula
       system "cmake . -DBREW:BOOL=TRUE" 
     end
 
+    system "make -j"
+    
+
     # Create symlink to library
     lib.install "libYORPLib.dylib"
     include.install "include/YORPLib"
