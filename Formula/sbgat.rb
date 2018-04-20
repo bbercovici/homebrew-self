@@ -25,7 +25,7 @@ class Sbgat < Formula
   desc "The implementation of the Small Bodies Geophysical Analysis Tool "
   homepage "https://github.com/bbercovici/SBGAT"
   url "https://github.com/bbercovici/SBGAT/archive/1.04.6.tar.gz"
-  sha256 "7cd119d7df0144c21263d064708211ee172b0ef1213e8bf649140858d27b0d9e"
+  sha256 "7cf5e4995464028680a7ca97436f763807b3964ccfaae11fb6c8e9702f747f6a"
 
   # Dependencies
   depends_on "cmake" 
