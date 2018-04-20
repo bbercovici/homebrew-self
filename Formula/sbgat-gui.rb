@@ -29,7 +29,7 @@ class SbgatGui < Formula
 
   # Dependencies
   depends_on "bbercovici/self/sbgat-core"
-  depends_on "qt"
+  # depends_on "qt"
   # depends_on "bbercovici/self/vtk"
 
   # Options
