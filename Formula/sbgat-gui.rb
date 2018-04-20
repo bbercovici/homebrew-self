@@ -26,12 +26,7 @@ class SbgatGui < Formula
   homepage "https://github.com/bbercovici/SBGAT"
   url "https://github.com/bbercovici/SBGAT/archive/1.04.6.tar.gz"
   sha256 "7cf5e4995464028680a7ca97436f763807b3964ccfaae11fb6c8e9702f747f6a"
-
-  # Dependencies
-  depends_on "bbercovici/self/sbgat-core"
-  # depends_on "qt"
-  # depends_on "bbercovici/self/vtk"
-
+  
   # Options
   option "with-gcc", "On Mac, will attempt to compile with gcc from the Cellar "
 
