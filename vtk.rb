@@ -32,6 +32,9 @@ class Vtk < Formula
   needs :cxx11
 
   def install
+
+
+    unix_makefiles = " Unix Makefiles"
     args = std_cmake_args + %W[
       -DBUILD_SHARED_LIBS=ON
       -DBUILD_TESTING=OFF
@@ -51,7 +54,7 @@ class Vtk < Formula
       -DVTK_USE_SYSTEM_TIFF=ON
       -DVTK_USE_SYSTEM_ZLIB=ON
       -DVTK_WRAP_TCL=ON
-      -G "Unix Makefiles" 
+      -G#{unix_makefiles} 
       -DVTK_USE_QVTK:BOOL=ON 
       -DVTK_USE_GUISUPPORT:BOOL=ON 
       -DModule_vtkIOExportOpenGL2:BOOL=ON 
