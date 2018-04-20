@@ -22,13 +22,13 @@
 
 class SbgatCore < Formula
 
-  desc "The implementation of the Small Bodies Geophysical Analysis Tool "
+  desc "The implementation of the Small Bodies Geophysical Analysis Tool"
   homepage "https://github.com/bbercovici/SBGAT"
   url "https://github.com/bbercovici/SBGAT/archive/1.04.6.tar.gz"
   sha256 "7cf5e4995464028680a7ca97436f763807b3964ccfaae11fb6c8e9702f747f6a"
 
   # Options
-  option "with-gcc", "On Mac, will attempt to compile with gcc from the Cellar "
+  option "with-gcc", "On Mac, will attempt to compile SbgatCore with gcc from the Homebrew Cellar "
   option 'with-qt', 'Will install Qt and the proper version of VTK to enable use of SbgatGui'
 
   # Dependencies
