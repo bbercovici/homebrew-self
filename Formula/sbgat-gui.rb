@@ -43,7 +43,9 @@ class SbgatGui < Formula
       else
         system "cmake ." 
       end 
-      system "make -j"
+      # system "make -j"
+      system "make -d"
+
 
       bin.install "SbgatGui"
 
