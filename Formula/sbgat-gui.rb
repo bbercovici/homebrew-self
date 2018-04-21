@@ -24,7 +24,7 @@ class SbgatGui < Formula
 
   desc "Graphic User Interface of the Small Body Geophysical Analysis Tool"
   homepage "https://github.com/bbercovici/SBGAT"
-  url "https://github.com/bbercovici/SBGAT/archive/1.04.6.tar.gz"
+  url "https://github.com/bbercovici/SBGAT/archive/1.04.3.tar.gz"
   sha256 "fdfe8bd0a53aa5fb64eb800ea6e1369990d0805a820aeae5b2e120f4336c7a89"
     
   depends_on "cmake" 
@@ -33,7 +33,6 @@ class SbgatGui < Formula
   option "with-gcc", "On Mac, will attempt to compile with gcc from the Cellar "
 
   def install
-
 
     # Compile and install SbgatGui
     Dir.chdir("SbgatGui/build") do
