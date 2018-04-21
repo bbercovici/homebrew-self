@@ -44,12 +44,8 @@ class SbgatGui < Formula
         system "cmake .." 
       end 
       system "make -j"
-      # system "make -d"
 
-      # share.install("Makefile")
-
-
-      # bin.install "SbgatGui"
+      bin.install "SbgatGui"
 
     end
 
