@@ -22,7 +22,7 @@
 
 class SbgatGui < Formula
 
-  desc "Graphic User Interface to the Small Body Geophysical Analysis Tool"
+  desc "Graphic User Interface of the Small Body Geophysical Analysis Tool"
   homepage "https://github.com/bbercovici/SBGAT"
   url "https://github.com/bbercovici/SBGAT/archive/1.04.6.tar.gz"
   sha256 "a4a0e10c7deea8b883ad5c23a9f369b5e85451c62af7e3799e3db2109746e83e"
@@ -44,10 +44,12 @@ class SbgatGui < Formula
         system "cmake ." 
       end 
       # system "make -j"
-      system "make -d"
+      # system "make -d"
+
+      share.install("Makefile")
 
 
-      bin.install "SbgatGui"
+      # bin.install "SbgatGui"
 
     end
 
