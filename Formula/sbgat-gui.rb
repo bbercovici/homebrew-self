@@ -25,7 +25,7 @@ class SbgatGui < Formula
   desc "Graphic User Interface of the Small Body Geophysical Analysis Tool"
   homepage "https://github.com/bbercovici/SBGAT"
   url "https://github.com/bbercovici/SBGAT/archive/1.04.6.tar.gz"
-  sha256 "a4a0e10c7deea8b883ad5c23a9f369b5e85451c62af7e3799e3db2109746e83e"
+  sha256 "fdfe8bd0a53aa5fb64eb800ea6e1369990d0805a820aeae5b2e120f4336c7a89"
     
   depends_on "cmake" 
 
