@@ -36,17 +36,17 @@ class SbgatGui < Formula
 
 
     # Compile and install SbgatGui
-    Dir.chdir("SbgatGui") do
+    Dir.chdir("SbgatGui/build") do
       
       if build.with? "gcc"
         system "cmake . -DUSE_GCC:BOOL=TRUE" 
       else
         system "cmake ." 
       end 
-      # system "make -j"
+      system "make -j"
       # system "make -d"
 
-      share.install("Makefile")
+      # share.install("Makefile")
 
 
       # bin.install "SbgatGui"
