@@ -39,9 +39,9 @@ class SbgatGui < Formula
     Dir.chdir("SbgatGui/build") do
       
       if build.with? "gcc"
-        system "cmake . -DUSE_GCC:BOOL=TRUE" 
+        system "cmake .. -DUSE_GCC:BOOL=TRUE" 
       else
-        system "cmake ." 
+        system "cmake .." 
       end 
       system "make -j"
       # system "make -d"
