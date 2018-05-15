@@ -24,7 +24,7 @@
 class Yorplib < Formula
   desc "A library for the computation of the Fourier decomposition of YORP forces and moments"
   homepage "https://github.com/bbercovici/YORPLib"
-  url "https://github.com/bbercovici/YORPLib/archive/1.0.6.tar.gz"
+  url "https://github.com/bbercovici/YORPLib/archive/1.0.7.tar.gz"
   sha256 "08c2df5a3d028fafe169892e9e1da17c4910ded0503ff6a72d082b0bac7ffde0"
 
   depends_on "cmake" => :build
