@@ -29,16 +29,21 @@ class SbgatCore < Formula
 
   # Options
   option "with-gcc", "On Mac, will attempt to compile SbgatCore with gcc from the Homebrew Cellar "
-  option 'with-qt', 'Will install Qt and the proper version of VTK to enable use of SbgatGui'
+  option 'with-qt', 'Will install Qt and VTK with the correct flags to enable use of SbgatGui'
 
   # Dependencies
   depends_on "cmake" 
   depends_on "bbercovici/self/rbk" 
   depends_on "bbercovici/self/sharmlib" 
   depends_on "bbercovici/self/yorplib"
-  depends_on "qt" if build.with?("qt")
+  # depends_on "qt" if build.with?("qt")
+  # depends_on "bbercovici/self/vtk" if  build.with?("qt")
+  # depends_on "vtk" if  !build.with?("qt")
+
+  depends_on "qt" => :optional
   depends_on "bbercovici/self/vtk" if  build.with?("qt")
   depends_on "vtk" if  !build.with?("qt")
+
 
   def install
 
