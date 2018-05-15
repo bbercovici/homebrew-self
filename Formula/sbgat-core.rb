@@ -25,7 +25,7 @@ class SbgatCore < Formula
   desc "The implementation of the Small Bodies Geophysical Analysis Tool"
   homepage "https://github.com/bbercovici/SBGAT"
   url "https://github.com/bbercovici/SBGAT/archive/1.05.1.tar.gz"
-  sha256 "d5dc93477f8bc5c8ecde88e199ab670ff7ed1502afd0fa3d87ea259252ce5809"
+  sha256 "57d1f8eb691a516fe117e14a5f5c33e874cdf0b60ca695bd2be68127c2756b09"
 
   # Options
   option "with-gcc", "On Mac, will attempt to compile SbgatCore with gcc from the Homebrew Cellar "
