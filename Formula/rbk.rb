@@ -27,7 +27,7 @@ class Rbk < Formula
   sha256 "38efbb619c5096f5d828b7be02bb9761c925509e3659bd463b4230217953f1b9"
 
 
-  option "without-gcc", "Will not attempt to find OMP-compliant GCC compiler in Homebrew's Cellar"
+  option "without-gcc", "Will not attempt to find an OMP-compliant GCC compiler in Homebrew's Cellar"
   depends_on "cmake" => :build
 
   def install

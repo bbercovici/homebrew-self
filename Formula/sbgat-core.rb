@@ -28,7 +28,7 @@ class SbgatCore < Formula
   sha256 "57d1f8eb691a516fe117e14a5f5c33e874cdf0b60ca695bd2be68127c2756b09"
 
   # Options
-  option "with-gcc", "On Mac, will attempt to compile SbgatCore with gcc from the Homebrew Cellar " => :recommended
+  option "without-gcc", "Will not attempt to find an OMP-compliant GCC compiler in Homebrew's Cellar"
 
   # Dependencies
   depends_on "cmake" 
@@ -41,21 +41,21 @@ class SbgatCore < Formula
     # Compile and install SbgatCore
     Dir.chdir("SbgatCore") do
 
-    if build.with? "gcc"
-      system "cmake . -DBREW:BOOL=TRUE -DUSE_GCC:BOOL=TRUE" 
-    else
-      system "cmake . -DBREW:BOOL=TRUE" 
+      if build.without? "gcc"
+        system "cmake . -DBREW:BOOL=TRUE" 
+      else
+        system "cmake . -DBREW:BOOL=TRUE -DUSE_GCC:BOOL=TRUE" 
+      end
+
+      system "make -j"
+
+      include.install "include/SbgatCore"
+      include.install "include/nlohmann"
+
+      share.install "SbgatCore"
+      lib.install "libSbgatCore.dylib"
+
     end
-
-    system "make -j"
-
-    include.install "include/SbgatCore"
-    include.install "include/nlohmann"
-
-    share.install "SbgatCore"
-    lib.install "libSbgatCore.dylib"
-
-  end
 
     prefix.install "Tests/"
 

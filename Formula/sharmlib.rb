@@ -26,8 +26,8 @@ class Sharmlib < Formula
   url "https://github.com/bbercovici/SHARMLib/archive/1.0.4.tar.gz"
   sha256 "13d9ec1437cac23e41bec3fd345e4f387b0d120cb2442c04ceba63d14f9435c5"
 
-  
-  option "without-gcc", "Will not attempt to find OMP-compliant GCC compiler in Homebrew's Cellar"
+
+  option "without-gcc", "Will not attempt to find an OMP-compliant GCC compiler in Homebrew's Cellar"
   depends_on "cmake" => :build
 
   def install

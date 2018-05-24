@@ -28,7 +28,7 @@ class Yorplib < Formula
   sha256 "d103f0c3a28a5731c913c0bac52c78b0b31baa015ec774114770baae56247867"
 
 
-  option "without-gcc", "Will not attempt to find OMP-compliant GCC compiler in Homebrew's Cellar"
+  option "without-gcc", "Will not attempt to find an OMP-compliant GCC compiler in Homebrew's Cellar"
   depends_on "cmake" => :build
 
   def install
