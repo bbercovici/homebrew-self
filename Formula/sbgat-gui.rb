@@ -30,7 +30,7 @@ class SbgatGui < Formula
   depends_on "cmake" 
 
   # Options
-  option "with-gcc", "On Mac, will attempt to compile with gcc from the Cellar "
+  option "with-gcc", "On Mac, will attempt to compile with gcc from the Cellar " => :recommended
 
   def install
 

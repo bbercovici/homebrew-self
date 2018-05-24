@@ -28,8 +28,7 @@ class SbgatCore < Formula
   sha256 "57d1f8eb691a516fe117e14a5f5c33e874cdf0b60ca695bd2be68127c2756b09"
 
   # Options
-  option "with-gcc", "On Mac, will attempt to compile SbgatCore with gcc from the Homebrew Cellar "
-  option 'with-qt', 'Will install Qt and VTK with the correct flags to enable use of SbgatGui'
+  option "with-gcc", "On Mac, will attempt to compile SbgatCore with gcc from the Homebrew Cellar " => :recommended
 
   # Dependencies
   depends_on "cmake" 
