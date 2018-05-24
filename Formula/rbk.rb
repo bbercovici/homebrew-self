@@ -26,10 +26,10 @@ class Rbk < Formula
   url "https://github.com/bbercovici/RigidBodyKinematics/archive/1.0.6.tar.gz"
   sha256 "38efbb619c5096f5d828b7be02bb9761c925509e3659bd463b4230217953f1b9"
 
-  depends_on "cmake" => :build
 
   option "with-gcc", "On Mac, will attempt to compile with gcc from the Cellar " => :recommended
-
+  depends_on "cmake" => :build
+  
   def install
 
     # Compile
