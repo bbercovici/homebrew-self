@@ -27,7 +27,7 @@ class Rbk < Formula
   sha256 "38efbb619c5096f5d828b7be02bb9761c925509e3659bd463b4230217953f1b9"
 
 
-  option "with-gcc" => :recommended , "On Mac, will attempt to compile with gcc from the Cellar " 
+  option "with-gcc"  => :recommended 
   depends_on "cmake" => :build
 
   def install
