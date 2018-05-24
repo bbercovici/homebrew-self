@@ -28,9 +28,10 @@ class Yorplib < Formula
   sha256 "d103f0c3a28a5731c913c0bac52c78b0b31baa015ec774114770baae56247867"
 
 
-  option "with-gcc", "On Mac, will attempt to compile with gcc from the Cellar " => :recommended
-  depends_on "cmake" => :build
+  option "with-gcc" => :recommended , "On Mac, will attempt to compile with gcc from the Cellar " 
   
+  depends_on "cmake" => :build
+
   def install
 
     # Compile
