@@ -23,7 +23,7 @@
 class Rbk < Formula
   desc "Implementation of a number of useful rigid body kinematics routines and frame conversion utilities relying on Armadillo."
   homepage "https://github.com/bbercovici/RigidBodyKinematics"
-  url "https://github.com/bbercovici/RigidBodyKinematics/archive/1.0.6.tar.gz"
+  url "https://github.com/bbercovici/RigidBodyKinematics/archive/1.0.7.tar.gz"
   sha256 "38efbb619c5096f5d828b7be02bb9761c925509e3659bd463b4230217953f1b9"
 
 
