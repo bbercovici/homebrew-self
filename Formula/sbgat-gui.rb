@@ -27,7 +27,10 @@ class SbgatGui < Formula
   url "https://github.com/bbercovici/SBGAT/archive/1.05.2.tar.gz"
   sha256 "db40fa8a6f74273e330212d641cb2fec449ca2f6f9a7a2b6176a9e2439903ca9"
     
-  depends_on "cmake" 
+  depends_on "cmake"
+  depends_on "qt"
+
+
 
   # Options
   option "without-gcc", "Will not attempt to find an OMP-compliant GCC compiler in Homebrew's Cellar"
