@@ -30,18 +30,18 @@ class SbgatGui < Formula
   depends_on "cmake" 
 
   # Options
-  option "with-gcc", "On Mac, will attempt to compile with gcc from the Cellar " => :recommended
+  option "without-gcc", "Will not attempt to find an OMP-compliant GCC compiler in Homebrew's Cellar"
 
   def install
 
     # Compile and install SbgatGui
     Dir.chdir("SbgatGui/build") do
       
-      if build.with? "gcc"
-        system "cmake .. -DUSE_GCC:BOOL=TRUE" 
+      if build.without? "gcc"
+        system "cmake . -DBREW:BOOL=TRUE" 
       else
-        system "cmake .." 
-      end 
+        system "cmake . -DBREW:BOOL=TRUE -DUSE_GCC:BOOL=TRUE" 
+      end
       system "make -j"
 
       bin.install "SbgatGui"
