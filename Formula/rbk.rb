@@ -24,7 +24,7 @@ class Rbk < Formula
   desc "Implementation of a number of useful rigid body kinematics routines and frame conversion utilities relying on Armadillo."
   homepage "https://github.com/bbercovici/RigidBodyKinematics"
   url "https://github.com/bbercovici/RigidBodyKinematics/archive/1.0.7.tar.gz"
-  sha256 "38efbb619c5096f5d828b7be02bb9761c925509e3659bd463b4230217953f1b9"
+  sha256 "5358e9b316d492fcf9bb25b76788b4573a6daf11d8b721c57fa47da6aa299a78"
 
 
   option "without-gcc", "Will not attempt to find an OMP-compliant GCC compiler in Homebrew's Cellar"
