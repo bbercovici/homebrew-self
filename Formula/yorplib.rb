@@ -25,7 +25,7 @@ class Yorplib < Formula
   desc "A library for the computation of the Fourier decomposition of YORP forces and moments"
   homepage "https://github.com/bbercovici/YORPLib"
   url "https://github.com/bbercovici/YORPLib/archive/1.0.9.tar.gz"
-  sha256 "d103f0c3a28a5731c913c0bac52c78b0b31baa015ec774114770baae56247867"
+  sha256 "f6f42ce1ad8efff94e1884d9182e67e33a78ede449ca265da8f441e14cfd3a09"
 
 
   option "without-gcc", "Will not attempt to find an OMP-compliant GCC compiler in Homebrew's Cellar"
