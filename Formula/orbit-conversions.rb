@@ -28,8 +28,9 @@ class OrbitConversions < Formula
   sha256 "aa37858dfc0486ec2e7e8548854654a0ca1d8e969c775707376d44689edaf972"
 
   option "without-gcc", "Will not attempt to find an OMP-compliant GCC compiler in Homebrew's Cellar"
+  
   depends_on "cmake" => :build
-  depends_on "rbk" => :build
+  depends_on "bbercovici/self/rbk"
 
   def install
 
@@ -41,7 +42,6 @@ class OrbitConversions < Formula
     end
 
     system "make -j"
-
 
     # Create symlink to library
     lib.install "libOrbitConversions.dylib"

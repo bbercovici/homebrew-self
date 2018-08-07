@@ -29,7 +29,8 @@ class SbgatGui < Formula
     
   depends_on "cmake"
   depends_on "qt"
-
+  depends_on "sbgat-core"
+  
 
 
   # Options
