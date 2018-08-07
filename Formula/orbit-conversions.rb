@@ -25,7 +25,7 @@ class OrbitConversions < Formula
   desc "A collection of orbit conversion routines"
   homepage "https://github.com/bbercovici/OrbitConversions"
   url "https://github.com/bbercovici/OrbitConversions/archive/1.0.3.tar.gz"
-  sha256 "aa37858dfc0486ec2e7e8548854654a0ca1d8e969c775707376d44689edaf972"
+  sha256 "c6142a56e7eb0719266737ece9b38fc40b83907fe9a62933011839ad3043101b"
 
   option "without-gcc", "Will not attempt to find an OMP-compliant GCC compiler in Homebrew's Cellar"
   
