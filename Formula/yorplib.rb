@@ -28,20 +28,13 @@ class Yorplib < Formula
   sha256 "f6f42ce1ad8efff94e1884d9182e67e33a78ede449ca265da8f441e14cfd3a09"
 
 
-  option "without-gcc", "Will not attempt to find an OMP-compliant GCC compiler in Homebrew's Cellar"
   depends_on "cmake" => :build
 
   def install
 
     # Compile
-    if build.without? "gcc"
-      system "cmake . -DBREW:BOOL=TRUE" 
-    else
-      system "cmake . -DBREW:BOOL=TRUE -DUSE_GCC:BOOL=TRUE" 
-    end
-
+    system "cmake . -DBREW:BOOL=TRUE" 
     system "make -j"
-
 
     # Create symlink to library
     lib.install "libYORPLib.dylib"

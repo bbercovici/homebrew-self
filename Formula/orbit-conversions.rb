@@ -26,20 +26,14 @@ class OrbitConversions < Formula
   homepage "https://github.com/bbercovici/OrbitConversions"
   url "https://github.com/bbercovici/OrbitConversions/archive/1.0.3.tar.gz"
   sha256 "c6142a56e7eb0719266737ece9b38fc40b83907fe9a62933011839ad3043101b"
-  option "without-gcc", "Will not attempt to find an OMP-compliant GCC compiler in Homebrew's Cellar"
-  
+    
   depends_on "cmake" => :build
   depends_on "bbercovici/self/rbk"
 
   def install
 
     # Compile
-    if build.without? "gcc"
-      system "cmake . -DBREW:BOOL=TRUE" 
-    else
-      system "cmake . -DBREW:BOOL=TRUE -DUSE_GCC:BOOL=TRUE" 
-    end
-
+    system "cmake . -DBREW:BOOL=TRUE" 
     system "make -j"
 
     # Create symlink to library

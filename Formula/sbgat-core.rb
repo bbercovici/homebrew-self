@@ -28,7 +28,6 @@ class SbgatCore < Formula
   sha256 "7f3ba7597e8147cdbe9de7a25f278dd3ed2a8a9ea12c9c5afa9533f682aa8bd6"
 
   # Options
-  option "without-gcc", "Will not attempt to find an OMP-compliant GCC compiler in Homebrew's Cellar"
 
   # Dependencies
   depends_on "cmake" 
@@ -44,12 +43,7 @@ class SbgatCore < Formula
     # Compile and install SbgatCore
     Dir.chdir("SbgatCore") do
 
-      if build.without? "gcc"
-        system "cmake . -DBREW:BOOL=TRUE" 
-      else
-        system "cmake . -DBREW:BOOL=TRUE -DUSE_GCC:BOOL=TRUE" 
-      end
-
+      system "cmake . -DBREW:BOOL=TRUE" 
       system "make -j"
 
       include.install "include/SbgatCore"

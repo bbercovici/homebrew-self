@@ -26,20 +26,12 @@ class Rbk < Formula
   url "https://github.com/bbercovici/RigidBodyKinematics/archive/1.0.8.tar.gz"
   sha256 "c8b02d39d88bbc8f0564d5b60c7782aa7a180922609b96784462f4cf531adc37"
 
-
-  option "without-gcc", "Will not attempt to find an OMP-compliant GCC compiler in Homebrew's Cellar"
   depends_on "cmake" => :build
 
   def install
 
     # Compile
-    if build.without? "gcc"
-      system "cmake . -DBREW:BOOL=TRUE" 
-    else
-      system "cmake . -DBREW:BOOL=TRUE -DUSE_GCC:BOOL=TRUE" 
-    end
-
-    # Compile
+    system "cmake . -DBREW:BOOL=TRUE" 
     system "make"
 
     # Create symlink to library

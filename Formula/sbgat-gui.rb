@@ -33,19 +33,12 @@ class SbgatGui < Formula
 
 
 
-  # Options
-  option "without-gcc", "Will not attempt to find an OMP-compliant GCC compiler in Homebrew's Cellar"
-
   def install
 
     # Compile and install SbgatGui
     Dir.chdir("SbgatGui/build") do
       
-      if build.without? "gcc"
-        system "cmake .. -DBREW:BOOL=TRUE" 
-      else
-        system "cmake .. -DBREW:BOOL=TRUE -DUSE_GCC:BOOL=TRUE" 
-      end
+      system "cmake .. -DBREW:BOOL=TRUE" 
       system "make -j"
 
       bin.install "SbgatGui"
