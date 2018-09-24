@@ -23,7 +23,7 @@
 class Sharmlib < Formula
   desc "A library of functions computing the spherical harmonics expansion of the gravity acceleration caused by a constant density polyhedron."
   homepage "https://github.com/bbercovici/SHARMLib"
-  url "https://github.com/bbercovici/SHARMLib/archive/1.0.6.tar.gz"
+  url "https://github.com/bbercovici/SHARMLib/archive/1.0.7.tar.gz"
   sha256 "a19c834373dcbdb79f312d8f2cd02182edf31c527dd1669207aca4d6cc01efd6"
 
   depends_on "cmake" => :build
