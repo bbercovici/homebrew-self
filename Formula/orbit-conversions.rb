@@ -24,7 +24,7 @@
 class OrbitConversions < Formula
   desc "A collection of orbit conversion routines"
   homepage "https://github.com/bbercovici/OrbitConversions"
-  url "https://github.com/bbercovici/OrbitConversions/archive/1.0.3.tar.gz"
+  url "https://github.com/bbercovici/OrbitConversions/archive/1.0.4.tar.gz"
   sha256 "c6142a56e7eb0719266737ece9b38fc40b83907fe9a62933011839ad3043101b"
     
   depends_on "cmake" => :build
