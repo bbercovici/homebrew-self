@@ -31,6 +31,7 @@ class SbgatCore < Formula
 
   # Dependencies
   depends_on "cmake" 
+  depends_on "libomp"
   depends_on "bbercovici/self/rbk" 
   depends_on "bbercovici/self/sharmlib" 
   depends_on "bbercovici/self/yorplib"
@@ -43,7 +44,7 @@ class SbgatCore < Formula
     # Compile and install SbgatCore
     Dir.chdir("SbgatCore") do
 
-      system "cmake . -DBREW:BOOL=TRUE" 
+      system "cmake . -DBREW:BOOL=TRUE -DOpenMP_CXX_FLAGS='-Xpreprocessor -fopenmp -I/usr/local/opt/libomp/include' -DOpenMP_CXX_LIB_NAMES=omp -DOpenMP_omp_LIBRARY=/usr/local/opt/libomp/lib/libomp.dylib" 
       system "make -j"
 
       include.install "include/SbgatCore"

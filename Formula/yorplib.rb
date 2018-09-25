@@ -28,12 +28,13 @@ class Yorplib < Formula
   sha256 "f6f42ce1ad8efff94e1884d9182e67e33a78ede449ca265da8f441e14cfd3a09"
 
 
-  depends_on "cmake" => :build
+  depends_on "cmake"
+  depends_on "libomp"
 
   def install
 
     # Compile
-    system "cmake . -DBREW:BOOL=TRUE" 
+    system "cmake . -DBREW:BOOL=TRUE -DOpenMP_CXX_FLAGS='-Xpreprocessor -fopenmp -I/usr/local/opt/libomp/include' -DOpenMP_CXX_LIB_NAMES=omp -DOpenMP_omp_LIBRARY=/usr/local/opt/libomp/lib/libomp.dylib" 
     system "make -j"
 
     # Create symlink to library
