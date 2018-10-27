@@ -28,7 +28,9 @@ class OrbitConversions < Formula
   sha256 "c6da155267000d8afd354cfa8de83a8bd8d404db4396e02220371fe14be9695b"
     
   depends_on "cmake" => :build
+  depends_on "armadillo"
   depends_on "bbercovici/self/rbk"
+
 
   def install
 

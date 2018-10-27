@@ -27,6 +27,7 @@ class Rbk < Formula
   sha256 "ca2ed213eb410e770f42d104339062232c09be000aeb610cf78accbf8424c664"
 
   depends_on "cmake" => :build
+  depends_on "armadillo"
 
   def install
 

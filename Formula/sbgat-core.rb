@@ -24,7 +24,7 @@ class SbgatCore < Formula
 
   desc "The implementation of the Small Bodies Geophysical Analysis Tool"
   homepage "https://github.com/bbercovici/SBGAT"
-  url "https://github.com/bbercovici/SBGAT/archive/1.09.1.tar.gz"
+  url "https://github.com/bbercovici/SBGAT/archive/1.10.1.tar.gz"
   sha256 "89165051aa0a5c7f46ae2f781b43a5166cfe00a728b955d40bf259fe1ff1ad12"
 
   # Options
@@ -32,6 +32,7 @@ class SbgatCore < Formula
   # Dependencies
   depends_on "cmake" 
   depends_on "libomp"
+  depends_on "armadillo"
   depends_on "bbercovici/self/rbk" 
   depends_on "bbercovici/self/sharmlib" 
   depends_on "bbercovici/self/yorplib"
