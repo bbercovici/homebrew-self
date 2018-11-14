@@ -23,7 +23,7 @@
 class Rbk < Formula
   desc "Implementation of a number of useful rigid body kinematics routines and frame conversion utilities relying on Armadillo."
   homepage "https://github.com/bbercovici/RigidBodyKinematics"
-  url "https://github.com/bbercovici/RigidBodyKinematics/archive/1.0.9.tar.gz"
+  url "https://github.com/bbercovici/RigidBodyKinematics/archive/1.0.10.tar.gz"
   sha256 "ca2ed213eb410e770f42d104339062232c09be000aeb610cf78accbf8424c664"
 
   depends_on "cmake" => :build
