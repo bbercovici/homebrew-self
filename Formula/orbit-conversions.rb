@@ -31,7 +31,6 @@ class OrbitConversions < Formula
   depends_on "armadillo"
   depends_on "bbercovici/self/rbk"
 
-
   def install
 
     # Compile
