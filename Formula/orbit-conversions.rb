@@ -25,7 +25,7 @@ class OrbitConversions < Formula
   desc "A collection of orbit conversion routines"
   homepage "https://github.com/bbercovici/OrbitConversions"
   url "https://github.com/bbercovici/OrbitConversions/archive/1.0.5.tar.gz"
-  sha256 "c6da155267000d8afd354cfa8de83a8bd8d404db4396e02220371fe14be9695b"
+  sha256 "fa9188f3057dde5fbe1edc0cd7d4c668721d666592f9541acaabe8ea7b4e9b5c"
     
   depends_on "cmake" => :build
   depends_on "armadillo"
