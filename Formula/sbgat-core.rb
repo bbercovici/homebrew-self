@@ -24,7 +24,7 @@ class SbgatCore < Formula
 
   desc "The implementation of the Small Bodies Geophysical Analysis Tool"
   homepage "https://github.com/bbercovici/SBGAT"
-  url "https://github.com/bbercovici/SBGAT/archive/1.12.2.tar.gz"
+  url "https://github.com/bbercovici/SBGAT/archive/2.01.1.tar.gz"
   sha256 "c132cf954fd5905a1a42c749c31fbcd15930159905e8796b7cb7e82cb3deaddf"
 
   # Options
