@@ -24,7 +24,7 @@ class Shapeuqlib < Formula
   desc "Implementation of an analytical small body shape uncertainty and inertia statistics formulation."
   homepage "https://github.com/bbercovici/ShapeUQLib"
   url "https://github.com/bbercovici/ShapeUQLib/archive/1.0.0.tar.gz"
-  sha256 "99f141249add6e676054d2bfecc84f64117242d6f36ac422056b53ebf873997b"
+  sha256 "a08484ee69027d58fd814fe24ef8d44d48548bace6c2776bdb9be13ed2cd037c"
 
   depends_on "cmake" => :build
   depends_on "armadillo"
