@@ -31,14 +31,13 @@ class SbgatCore < Formula
 
   # Dependencies
   depends_on "cmake" 
-  depends_on "libomp"
+  depends_on "libomp" :recommended
   depends_on "armadillo"
   depends_on "bbercovici/self/rbk" 
   depends_on "bbercovici/self/sharmlib" 
   depends_on "bbercovici/self/yorplib"
   depends_on "bbercovici/self/orbit-conversions"
   depends_on "shapeuqlib"
-
 
   depends_on "vtk"
   
@@ -47,7 +46,12 @@ class SbgatCore < Formula
     # Compile and install SbgatCore
     Dir.chdir("SbgatCore") do
 
-      system "cmake . -DBREW:BOOL=TRUE -DOpenMP_CXX_FLAGS='-Xpreprocessor -fopenmp -I/usr/local/opt/libomp/include' -DOpenMP_C_FLAGS='-Xpreprocessor -fopenmp -I/usr/local/opt/libomp/include' -DOpenMP_CXX_LIB_NAMES=omp -DOpenMP_C_LIB_NAMES=omp -DOpenMP_omp_LIBRARY=/usr/local/opt/libomp/lib/libomp.dylib"  
+      if build.without?("libomp")
+        system "cmake . -DBREW:BOOL=TRUE"  
+      else
+        system "cmake . -DBREW:BOOL=TRUE -DOpenMP_CXX_FLAGS='-Xpreprocessor -fopenmp -I/usr/local/opt/libomp/include' -DOpenMP_C_FLAGS='-Xpreprocessor -fopenmp -I/usr/local/opt/libomp/include' -DOpenMP_CXX_LIB_NAMES=omp -DOpenMP_C_LIB_NAMES=omp -DOpenMP_omp_LIBRARY=/usr/local/opt/libomp/lib/libomp.dylib"  
+      end
+      
       system "make -j"
 
       include.install "include/SbgatCore"
