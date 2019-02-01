@@ -23,18 +23,17 @@
 class Shapeuqlib < Formula
   desc "Implementation of an analytical shape uncertainty and inertia statistics formulation."
   homepage "https://github.com/bbercovici/ShapeUQLib"
-  url "https://github.com/bbercovici/ShapeUQLib/archive/1.0.4.tar.gz"
+  url "https://github.com/bbercovici/ShapeUQLib/archive/1.0.5.tar.gz"
   sha256 "ba3abc3df70dc0fb3d004e9050bf25a1a0655a80c93b49dfb5e0b04cc9936ef2"
 
   depends_on "cmake" => :build
   depends_on "armadillo"
   depends_on "libomp"
 
-
   def install
 
     # Compile
-    system "cmake . -DBREW:BOOL=TRUE" 
+    system "cmake . -DBREW:BOOL=TRUE -DOpenMP_CXX_FLAGS='-Xpreprocessor -fopenmp -I/usr/local/opt/libomp/include' -DOpenMP_CXX_LIB_NAMES=omp -DOpenMP_omp_LIBRARY=/usr/local/opt/libomp/lib/libomp.dylib"  
     system "make"
 
     # Create symlink to library
