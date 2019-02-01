@@ -29,6 +29,7 @@ class Shapeuqlib < Formula
   depends_on "cmake" => :build
   depends_on "armadillo"
   depends_on "libomp"
+  depends_on "gcc"
 
   def install
 
