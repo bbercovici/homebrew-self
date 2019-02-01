@@ -24,7 +24,7 @@ class Shapeuqlib < Formula
   desc "Implementation of an analytical shape uncertainty and inertia statistics formulation."
   homepage "https://github.com/bbercovici/ShapeUQLib"
   url "https://github.com/bbercovici/ShapeUQLib/archive/1.0.0.tar.gz"
-  sha256 "6c4e8e23a15bda26c74715165110717de809916951116a67724a07cb2dfd06e0"
+  sha256 "99f141249add6e676054d2bfecc84f64117242d6f36ac422056b53ebf873997b"
 
   depends_on "cmake" => :build
   depends_on "armadillo"
