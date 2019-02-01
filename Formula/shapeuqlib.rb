@@ -21,7 +21,7 @@
 # SOFTWARE.
 
 class Shapeuqlib < Formula
-  desc "Implementation of an analytical shape uncertainty and inertia statistics formulation."
+  desc "Implementation of an analytical small body shape uncertainty and inertia statistics formulation."
   homepage "https://github.com/bbercovici/ShapeUQLib"
   url "https://github.com/bbercovici/ShapeUQLib/archive/1.0.0.tar.gz"
   sha256 "99f141249add6e676054d2bfecc84f64117242d6f36ac422056b53ebf873997b"
