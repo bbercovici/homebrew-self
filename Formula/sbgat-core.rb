@@ -31,7 +31,7 @@ class SbgatCore < Formula
 
   # Dependencies
   depends_on "cmake" 
-  depends_on "libomp" :recommended
+  depends_on "libomp" => :recommended
   depends_on "armadillo"
   depends_on "bbercovici/self/rbk" 
   depends_on "bbercovici/self/sharmlib" 
@@ -51,7 +51,7 @@ class SbgatCore < Formula
       else
         system "cmake . -DBREW:BOOL=TRUE -DOpenMP_CXX_FLAGS='-Xpreprocessor -fopenmp -I/usr/local/opt/libomp/include' -DOpenMP_C_FLAGS='-Xpreprocessor -fopenmp -I/usr/local/opt/libomp/include' -DOpenMP_CXX_LIB_NAMES=omp -DOpenMP_C_LIB_NAMES=omp -DOpenMP_omp_LIBRARY=/usr/local/opt/libomp/lib/libomp.dylib"  
       end
-      
+
       system "make -j"
 
       include.install "include/SbgatCore"

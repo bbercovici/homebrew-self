@@ -29,7 +29,7 @@ class Yorplib < Formula
 
 
   depends_on "cmake"
-  depends_on "libomp" :recommended
+  depends_on "libomp" => :recommended
 
   def install
 
