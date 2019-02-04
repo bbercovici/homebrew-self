@@ -24,7 +24,7 @@ class SbgatCore < Formula
 
   desc "The implementation of the Small Bodies Geophysical Analysis Tool"
   homepage "https://github.com/bbercovici/SBGAT"
-  url "https://github.com/bbercovici/SBGAT/archive/2.01.2.tar.gz"
+  url "https://github.com/bbercovici/SBGAT/archive/2.02.1.tar.gz"
   sha256 "fbafb1fe7634607c4a8f219dd56f36ac95496794ed2d9d762483d479995a3622"
 
   # Options
@@ -47,7 +47,7 @@ class SbgatCore < Formula
     Dir.chdir("SbgatCore") do
 
       if build.without?("libomp")
-        system "cmake . -DBREW:BOOL=TRUE"  
+        system "cmake . -DBREW:BOOL=TRUE -DNO_OMP:BOOL=TRUE"  
       else
         system "cmake . -DBREW:BOOL=TRUE -DOpenMP_CXX_FLAGS='-Xpreprocessor -fopenmp -I/usr/local/opt/libomp/include' -DOpenMP_C_FLAGS='-Xpreprocessor -fopenmp -I/usr/local/opt/libomp/include' -DOpenMP_CXX_LIB_NAMES=omp -DOpenMP_C_LIB_NAMES=omp -DOpenMP_omp_LIBRARY=/usr/local/opt/libomp/lib/libomp.dylib"  
       end

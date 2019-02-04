@@ -24,7 +24,7 @@
 class Yorplib < Formula
   desc "A library for the computation of the Fourier decomposition of YORP forces and moments"
   homepage "https://github.com/bbercovici/YORPLib"
-  url "https://github.com/bbercovici/YORPLib/archive/1.0.10.tar.gz"
+  url "https://github.com/bbercovici/YORPLib/archive/1.0.11.tar.gz"
   sha256 "40bbf772eda91e82392d32849c6c4e6877cc0db9d308a4db18c9c0e69e8d98ec"
 
 
@@ -35,7 +35,7 @@ class Yorplib < Formula
 
     # Compile
     if build.without?("libomp")
-      system "cmake . -DBREW:BOOL=TRUE"  
+      system "cmake . -DBREW:BOOL=TRUE -DNO_OMP:BOOL=TRUE"  
     else
       system "cmake . -DBREW:BOOL=TRUE -DOpenMP_CXX_FLAGS='-Xpreprocessor -fopenmp -I/usr/local/opt/libomp/include' -DOpenMP_C_FLAGS='-Xpreprocessor -fopenmp -I/usr/local/opt/libomp/include' -DOpenMP_CXX_LIB_NAMES=omp -DOpenMP_C_LIB_NAMES=omp -DOpenMP_omp_LIBRARY=/usr/local/opt/libomp/lib/libomp.dylib"  
     end   
