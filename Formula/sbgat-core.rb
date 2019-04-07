@@ -64,6 +64,8 @@ class SbgatCore < Formula
 
     prefix.install "Tests/"
     prefix.install "resources/"
+    prefix.install "Examples/"
+
 
 
   end
